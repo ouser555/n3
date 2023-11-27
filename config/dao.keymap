@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define DEF 0
 #define LWR 1
@@ -315,7 +316,7 @@
             bindings = <
 &sys_reset  &bootloader  &none         &none         &none         &none         &none           &snagit  &moom_left       &moom_shrink       &moom_right       &none  &bootloader  &sys_reset
             &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &moom    &moom_left_half  &moom_top_half     &moom_right_half  &none  &none
-            &none        &none         &none         &none         &none         &none           &none    &none            &moom_bottom_half  &none             &none  &none
+            &none        &none         &mkp LCLK     &none         &none         &none           &none    &none            &moom_bottom_half  &none             &none  &none
                                                      &trans        &none         &trans          &trans   &none            &trans
             >;
         };
