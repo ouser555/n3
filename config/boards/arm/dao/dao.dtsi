@@ -64,17 +64,17 @@
 
 		diode-direction = "col2row";
 		row-gpios
-			= <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			= <&gpio0  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			, <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 09 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			;
 	};
 
 	vbatt: vbatt {
 		compatible = "zmk,battery-voltage-divider";
 		label = "VBATT";
-		io-channels = <&adc 2>; 
+		io-channels = <&adc 7>; 
 		output-ohms = <2000000>;
 		full-ohms = <(2000000 + 820000)>;
 	};
